@@ -17,6 +17,7 @@ public class MovingPipe : MonoBehaviour
         transform.position += Vector3.left * movement * Time.deltaTime; // deltaTime gör så att framerate inte spelar någon roll
         if(transform.position.x < deathZone)
         {
+            Debug.Log("Deleted Pipe");
             Destroy(gameObject);
         }
     }
